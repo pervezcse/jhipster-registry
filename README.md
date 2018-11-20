@@ -25,3 +25,14 @@ To run the cloned repository;
 
 [travis-image]: https://travis-ci.org/jhipster/jhipster-registry.svg?branch=master
 [travis-url]: https://travis-ci.org/jhipster/jhipster-registry
+
+## Running locally on docker
+
+To run the cloned repository;
+* For development run `./mvnw -Pdev,webpack` to just start in development or run `./mvnw` and run `yarn && yarn start` for hot reload of client side code.
+* For production profile run `./mvnw -Pprod`
+
+[travis-image]: https://travis-ci.org/jhipster/jhipster-registry.svg?branch=master
+[travis-url]: https://travis-ci.org/jhipster/jhipster-registry
+
+
