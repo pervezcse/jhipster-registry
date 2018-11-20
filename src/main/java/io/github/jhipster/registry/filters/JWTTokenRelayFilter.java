@@ -9,13 +9,13 @@ import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 
 import io.github.jhipster.registry.config.Constants;
-import io.github.jhipster.registry.security.oauth2.AuthorizationHeaderUtil;
 
 @Component
 @Profile("!" + Constants.PROFILE_OAUTH2)
 public class JWTTokenRelayFilter extends ZuulFilter {
 
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();
         Set<String> headers = (Set<String>) ctx.get("ignoredHeaders");
