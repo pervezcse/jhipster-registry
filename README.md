@@ -48,6 +48,7 @@ To run the cloned repository;
 7. Go to the link `http://localhost:8761`
 
 ## Helpful commands for docker:
+
 sudo docker container ps -a
 sudo docker container stats
 sudo docker container stop <CONTAINER ID>
