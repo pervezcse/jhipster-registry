@@ -44,5 +44,5 @@ To run the cloned repository;
 ```
 4. This `sudo ./mvnw package -Pprod -DskipTests` command will build and push docker image in local docker repo.
 5. To check the image run `sudo docker image ls`
-6. Run command `sudo docker run -p 8761:8761 jhipster-registry:latest`
-
+6. Run command `sudo docker run -dit --restart unless-stopped -p 8761:8761 jhipster-registry:latest`
+7. Go to the link `http://localhost:8761`
