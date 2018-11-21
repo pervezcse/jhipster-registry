@@ -46,3 +46,14 @@ To run the cloned repository;
 5. To check the image run `sudo docker image ls`
 6. Run command `sudo docker run -dit --restart unless-stopped -p 8761:8761 jhipster-registry:latest`
 7. Go to the link `http://localhost:8761`
+
+## Helpful commands for docker:
+sudo docker container ps -a
+sudo docker container stats
+sudo docker container stop <CONTAINER ID>
+
+sudo docker rm $(sudo docker ps -a -q)
+sudo docker rmi $(sudo docker images -q)
+sudo docker kill $(sudo docker ps -q)
+
+
