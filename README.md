@@ -50,11 +50,16 @@ To run the cloned repository;
 ## Helpful commands for docker:
 
 sudo docker container ps -a
+
 sudo docker container stats
+
 sudo docker container stop <CONTAINER ID>
 
+
 sudo docker rm $(sudo docker ps -a -q)
+
 sudo docker rmi $(sudo docker images -q)
+
 sudo docker kill $(sudo docker ps -q)
 
 
