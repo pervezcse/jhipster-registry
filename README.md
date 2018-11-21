@@ -32,18 +32,17 @@ To run the cloned repository;
 2. git clone https://github.com/pervezcse/jhipster-registry.git
 3. Uncooment the following part in pom file:
 
-`<executions>
-    <execution>
-        <id>default</coid>
-        <goals>
-            <goal>build</goal>
-            <goal>push</goal>
-        </goals>
-    </execution>
-</executions>`
+`<executions>`
+`    <execution>`
+`        <id>default</coid>`
+`        <goals>`
+`            <goal>build</goal>`
+`            <goal>push</goal>`
+`        </goals>`
+`    </execution>`
+`</executions>`
 
-4. This `sudo ./mvnw package` command will build and push docker image in local docker repo.
+4. This `sudo ./mvnw package -Pprod -DskipTests` command will build and push docker image in local docker repo.
 5. To check the image run `sudo docker image ls`
-6. Run command `docker run -p 8761:8761 jhipster-registry:latest`
-
+6. Run command `sudo docker run -p 8761:8761 jhipster-registry:latest`
 
