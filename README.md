@@ -26,13 +26,35 @@ To run the cloned repository;
 [travis-image]: https://travis-ci.org/jhipster/jhipster-registry.svg?branch=master
 [travis-url]: https://travis-ci.org/jhipster/jhipster-registry
 
-## Running locally on docker
+## Running locally on docker (ubuntu 18.04)
 
-To run the cloned repository;
-* For development run `./mvnw -Pdev,webpack` to just start in development or run `./mvnw` and run `yarn && yarn start` for hot reload of client side code.
-* For production profile run `./mvnw -Pprod`
+1. Install docker
+2. git clone https://github.com/pervezcse/jhipster-registry.git
+3. Uncooment the following part in pom file:
+```
+<executions>
+    <execution>
+        <id>default</coid>
+        <goals>
+            <goal>build</goal>
+            <goal>push</goal>
+        </goals>
+    </execution>
+</executions>
+```
+4. This `sudo ./mvnw package -Pprod -DskipTests` command will build and push docker image in local docker repo.
+5. To check the image run `sudo docker image ls`
+6. Run command `sudo docker run -dit --restart unless-stopped -p 8761:8761 jhipster-registry:latest`
+7. Go to the link `http://localhost:8761`
 
-[travis-image]: https://travis-ci.org/jhipster/jhipster-registry.svg?branch=master
-[travis-url]: https://travis-ci.org/jhipster/jhipster-registry
+## Helpful commands for docker:
+
+* sudo docker container ps -a
+* sudo docker container stats
+* sudo docker container stop <CONTAINER ID>
+
+* sudo docker rm $(sudo docker ps -a -q)
+* sudo docker rmi $(sudo docker images -q)
+* sudo docker kill $(sudo docker ps -q)
 
 
